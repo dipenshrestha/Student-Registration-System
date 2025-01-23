@@ -1,3 +1,5 @@
+
+![studentregsys](https://github.com/user-attachments/assets/aa9da393-dff4-4bd4-8fb1-1232f52d36e9)
 The Student Registration System is a web-based application designed to streamline the process of recording and managing students' personal information. 
 This system is beneficial for both students and school authorities, simplifying the data entry, retrieval, and management processes.
 The system supports fundamental CRUD operations (Create, Read, Update, Delete), allowing users to efficiently handle student records. It is built using a combination of technologies:
