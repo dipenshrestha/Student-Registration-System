@@ -1,0 +1,869 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+	width: 100%;
+    background-color: white;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#container{
+	height: 100%;
+	width: 100%;
+}
+
+#headContainer {
+	display: flex;
+	flex-direction: row;
+    background-color: black;
+    padding-bottom: 20px;
+}
+
+#bulb {
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    margin-top: 20px;
+    z-index: 1;
+    padding-left: 35%;
+    padding-top: 25px;
+}
+
+nav li{
+	margin-top: 10px;
+}
+
+nav ul li{
+    list-style: none; 
+    display: inline-block; /*displays list in horizontal*/
+} 
+
+nav ul li.active a, nav ul li a:hover, nav ul li a:focus{
+    color:#008131;
+}
+
+/* styles the link part of the list (menu bar) */
+nav ul li a{
+	text-decoration: none; /*Removes underline in link*/
+	padding: 0 25px 0px 30px; /*space between list elements*/
+	color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+nav ul li.drop-menu{
+    position: relative;
+}
+
+nav ul li ul.drop-down{
+    background: #c0c0c0;
+    min-width: 220px;
+    min-height:130px;
+    position: absolute;
+	margin-left: -150px;
+    margin-top: 2px;
+    padding-left: 20px;
+    display: none; /*To hide drop menu when not hovered*/
+}
+
+/*display drop down when mouse is hovered over bars*/
+ nav ul li.drop-menu:hover .drop-down{
+    display: block;
+}
+
+/*when elements in drop menu is hovered the highlighted part*/
+nav ul li ul.drop-down li{
+    display: block;
+}
+
+nav ul li ul.drop-down li a{
+    /* line-height:inherit; */
+    padding: 19px 0px 21px 0px;
+    text-transform: capitalize;
+    color: black;
+    border-bottom:1px solid #cccccc;
+    display: block;
+    font-size: 18px;
+    /* For smooth animation while hovering */
+    transition: all linear .4s;
+    -moz-transition: all linear .4s;
+    -webkit-transition: all linear .4s;
+    -o-transition: all linear .4s;
+    -ms-transition: all linear .4s;
+}
+
+/* action to take when mouse is hovered over drop list */
+nav ul li ul.drop-down li a:hover{
+    padding-left: 15px;
+    color:#008131;
+    background:#cccccc;
+}
+
+#firstimg {
+    margin-bottom: 100px;
+    padding-right: 50px;
+}
+
+#Content {
+    padding-top: 5px;
+    margin-top: -130px;
+    background-image: linear-gradient(black, #d3d3d3);
+    display: flex;
+    flex-direction: row;
+}
+
+#text1 {
+    /* position: relative;
+    z-index: 1; */
+    margin-top: 260px;
+    margin-right: 50px;
+    text-align: center;
+    font-family: serif;
+}
+
+#text1 h1 {
+    color: white;
+    font-size: 50px;
+    text-shadow: 6px 6px 12px black;
+}
+
+#content1 {
+    width: 100%;
+    background-image: linear-gradient(black, #01210e);
+    min-height: 1000px; 
+    margin-top: -140px;
+    position: relative;
+    z-index: 1;
+}
+
+#text2 {
+    /* position: relative;
+    z-index: 1; */
+    padding-top: 140px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#text2 p {
+    color: white;
+    font-size: 30px;
+    text-shadow: 5px 5px 10px green;
+}
+
+hr.line1 {
+    border: 1px solid #d3d3d3;
+    width: 23%;
+    border-bottom: 1px solid #008131;
+    margin: auto;
+}
+
+#cards {
+    position: relative;
+    z-index: 1;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#cards h1 {
+    color: #018f38;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+hr.cardhr {
+    border: 1px solid #e4e2e2;
+    width: 15%;
+    border-bottom: 1px solid #008131;
+    margin: auto;
+}
+
+
+#cards p {
+    font-size: x-large;
+}
+
+#card1 {
+    background-image: linear-gradient(#d3d3d3ad, #d3d3d3);
+    width: 30%;
+    border-radius: 7%;
+    margin: 30px;
+    padding: 50px;
+}
+
+#card2 {
+    background-image: linear-gradient(#d3d3d3ad, #d3d3d3);
+    width: 30%;
+    border-radius: 7%;
+    margin: 30px;
+    padding: 50px;
+}
+
+#card3 {
+    background-image: linear-gradient(#d3d3d3ad, #d3d3d3);
+    width: 30%;
+    border-radius: 7%;
+    margin: 30px;
+    padding: 50px;
+}
+
+#content2 {
+    display: flex;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
+
+#content2-img{
+    margin: 50px;
+    border-radius: 70px;
+}
+
+#content2-text{
+    color:#c0c0c0;
+    margin-left: 100px;
+    margin-top: 160px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#content2-button{
+    width: 350px;
+    height: 80px;
+    margin-top: 50px;
+    margin-left: 60px;
+    border-radius: 30px;
+    font-size: 30px;
+    color: #008131;
+}
+
+#content2-button:hover, #content2-button:focus{
+    color:blue;
+}
+
+footer {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    color: white;
+    background-color :black;
+    
+}
+
+#copyf1 {
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quicknav {
+    text-align: center;
+}
+
+.quicknav ul li a {
+    text-decoration: none; /*Removes underline in link*/
+	padding: 0 20px 0px 30px;
+	color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-right:1px white solid;
+
+}
+
+.quicknav ul li{
+    list-style: none; 
+    display: inline-block; /*displays list in horizontal*/
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+}
+    
+.quicknav ul li.active a, .quicknav ul li a:hover, .quicknav ul li a:focus{
+    color: blue;
+}
+
+
+.iconn {
+	text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+ul.icon li{
+    list-style: none; 
+    display: inline-block; /*displays list in horizontal*/
+	border-right:none;
+	padding:5px;
+}
+
+ul.icon li a{
+	border:1px solid white;
+	border-radius:100%;
+	padding:5px 8px 5px 9px;
+} 
+
+.fa-facebook {
+	color:white;
+}
+.fa-instagram{
+	color:white;
+}
+.fa-twitter{
+	color:white;
+}
+
+
+/* for feedback */
+
+#feedbackimg {
+    margin: 9%;
+    width: 800px;
+}
+
+#form_div {
+    background-image: linear-gradient(white, #d3d3d3ad);
+    margin-right: 60px;
+    padding: 40px;
+    border-radius: 60px ;
+    height: 620px;
+}
+
+
+#form_title {
+    font-style: oblique;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 3px gray;
+    font-size: large;
+}
+
+#feedback_form {
+    display: flex;
+    height: 650px;
+    background-image: linear-gradient(black, #01210e);
+    padding-bottom: 50px;
+}
+
+::placeholder {
+    color: gray;
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 50%;
+  }
+
+#form_fullname {
+    font-size: 25px;
+
+}
+
+#form_box_fullname {
+    font-size:  18px;
+    padding: 10px;
+    height: 30px;
+    width: 100%;
+    background-color: #d3d3d3;
+    border-color: rgb(91, 91, 204);
+    border-radius: 15px;
+ 
+    }
+
+#form_email {
+    font-size: 25px;
+   
+    }
+
+#form_box_email {
+        font-size:  18px;
+        padding: 10px;
+        height: 30px;
+        width: 100%;
+        background-color: #d3d3d3;
+        border-color: rgb(91, 91, 204);
+        border-radius: 15px;
+     
+        }
+
+ #form_choose {
+    font-size:  25px;
+        
+        }
+
+ #form_box_choose {
+    font-size: 30px;
+    background-color: #d3d3d3;
+    border-color: rgb(91, 91, 204);
+    border-radius: 15px; 
+     }
+
+#form_thought {
+    font-size: 25px;
+                
+     }
+
+#form_box_thought {
+     font-size: 18px;
+         height: 90px;  width: 100%;       
+         padding: 10px;  
+         background-color: #d3d3d3;
+         border-color: rgb(91, 91, 204);
+         border-radius: 15px;
+      border-width: 2px;
+    }
+ 
+#submit {
+    font-size: 18px;
+    width: 320px; 
+    height: 40px;
+    background-color: #008131;
+    border: #008131;   
+    color: white;  
+    border-radius: 10px;    
+}
+
+#form_submit button:focus, #form_submit button:hover {
+    background-color:#018f38;
+}
+
+/* Registration Page Styling */
+
+#registration-container-outer{
+    min-height: 2000px;
+    min-width: none;
+    padding: 20px 100px 50px 100px;
+    background-image: linear-gradient(black, #01210e);
+}
+
+#registration-container-inner{
+    background-image: linear-gradient(#d3d3d3ad, white);
+    padding: 80px;
+    border-radius: 40px;
+}
+
+#registration-textfirst{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+#registration-textfirst h1 {
+    font-size: 40px;
+    color:#008131;
+    padding-bottom: 50px;
+}
+
+/* Student name styling */
+#registration-n-student-inner {
+    height: 40px;
+    width: 33%
+}
+
+.ns1, .ns2, .ns3{
+    padding: 20px;
+}
+
+/* dob Styling */
+#registration-dob-outer {
+    padding-top: 20px ;
+}
+
+#registration-dob-inner {
+    height: 40px;
+    width: 50%
+}
+
+.dob1 {
+    padding: 20px;
+    font-size: 15px;
+}
+
+/* gender styling */
+
+#registration-gender-outer{
+    padding-top: 20px ;
+}
+
+#gender {
+    display: flex;
+    flex-direction: row;
+}
+
+#gender p{
+    font-size: 20px;
+}
+
+#gender div:nth-child(2) {
+    padding-left: 130px;
+}
+
+#gender div:nth-child(3) {
+    padding-left: 130px;
+}
+
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* email styling */
+#registration-pnum-and-email-outer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+#registration-pnum-and-email-outer div:nth-child(2) {
+    padding-left: 40px;
+}
+
+#registration-pnum-and-email-inner {
+    height: 40px;
+    width: 474px; 
+}
+
+.registration-pnum-inner{
+    padding: 20px;
+}
+
+.registration-email-inner{
+    padding: 20px;
+}
+
+/* father styling */
+
+#registration-textsecond h2 {
+    font-size: 40px;
+    color:#008131;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+/* mother styling */
+#registration-n-mother-outer {
+    padding-top: 20px;
+}
+
+#registration-parent-inner {
+    height: 40px;
+    width: 80%
+}
+
+/* address styling */
+
+#registration-address-outer {
+    display: flex;
+    flex-direction: row;
+}
+
+#registration-address-inner{
+    padding: 20px;
+    height: 40px;
+    width: 474px;
+}
+
+#registration-address-outer div:nth-child(2) {
+    padding-left: 40px;
+}
+
+/* qualifications styling */
+
+#qualification table{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    border: 4px solid gray;
+    font-size: x-large;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/* percentage styling */
+#percentage {
+    padding: 20px 5px 20px 5px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+/* year of passing */
+#yearr {
+    padding: 20px 5px 20px 5px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+/* table title styling */
+#table-title {
+    padding: 12px;
+}
+
+/* buttons styling */
+#buttons {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-buttons{
+    background-color: #008131;
+    color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    border: #008131;
+    font-size: x-large;
+}
+
+#button1{
+    margin-right: 20px;
+}
+
+#buttons button:focus, #buttons button:hover {
+    background-color:#018f38;
+}
+
+
+/* for feedback............................................................................ */
+.color_black{
+    background-color: #000;
+
+}
+
+#feedbackimg {
+    margin: 9%;
+    width: 800px;
+}
+
+#form_div {
+    background-color: #d3d3d3;
+    margin-top: 2%;
+    margin-right: 35px;
+    padding: 30px;
+    border-radius: 60px ;
+
+}
+
+#form_title {
+    font-style: oblique;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 3px gray;
+    font-size: 18px;
+
+}
+
+.feedback_form {
+    display: flex;
+    height: 665px;
+
+}
+::placeholder {
+    color: gray;
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 50%;
+}
+
+.form_text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form_box_text {
+    font-size:  18px;
+    padding: 10px;
+    height: 30px;
+    width: 100%;
+    background-color: #d3d3d3;
+    border-color: rgb(91, 91, 204);
+    border-radius: 15px;
+ 
+}
+
+#form_box_thought {
+    font-size: 18px;
+    height: 125px;  width: 100%;       
+    padding: 10px;  
+    background-color: #d3d3d3;
+    border-color: rgb(91, 91, 204);
+    border-radius: 15px;
+    border-width: 2px;
+}
+
+#submit {
+    font-size: 18px;
+    width: 210px; 
+    background-color: #25a756;
+    border: none;
+    color: white;    
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color:#188542 ;
+    color: rgb(2, 45, 45);
+}
+
+.center{
+    text-align: center;
+    align-items: center;
+
+}
+
+/* about admin style....................................................................... */
+.container_outer{
+    padding: 50px 100px;
+    background-image: linear-gradient(black,#01210e);
+    min-height: 1000px;
+    
+}
+
+.topic{
+    text-align: center;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 75px;
+    text-shadow: 3px 1px 2px rgb(141, 135, 135);
+    margin-bottom: 30px;
+
+}
+
+#container_admin{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.admins{
+    font-size: large;
+    background: #d3d3d3;
+    width: 335px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    border-radius: 50px;
+    color: #000;
+
+}
+
+.img{
+    width: 140px;
+    border-radius: 100px;
+
+}
+
+
+.card{
+    margin: 7%;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    max-height: 40px ;
+    background-color: rgb(41, 36, 36);
+    color: white;
+    padding: 8px;
+}
+
+.id{
+    display: flex;
+}
+
+.topic_id{
+    font-weight: bold;
+}
+
+.data_id{
+    font-style: oblique;
+   
+}
+
+/* ********************Admin Message********************** */
+
+.container_about_message{
+    font-size: x-large;
+    background: #d3d3d3;
+    width: 500px;
+    height: 450px;
+    margin: 0 auto;
+    border-radius: 50px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: justify;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.faffl{
+    font-size: 100px;
+    opacity: 0.40;
+    position: absolute;
+    left: 35%;
+    color: #9e9898;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 30px;
+    -webkit-transform: rotate(-45deg); 
+    -moz-transform: rotate(-45deg);    
+    transform:rotate(-45deg);
+    font-family: 'Caveat', 'cursive';
+}
+
+/* ********************About US********************** */
+
+.container_about_us{
+    font-size: 20px;
+    background: #d3d3d3;
+    width: 530px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 50px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: justify;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.faffl{
+    font-size: 100px;
+    opacity: 0.40;
+    position: absolute;
+    left: 35%;
+    color: #9e9898;
+    top: 75%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 30px;
+    -webkit-transform: rotate(-45deg); 
+    -moz-transform: rotate(-45deg);    
+    transform:rotate(-45deg);
+    font-family: 'Caveat', 'cursive';
+}
