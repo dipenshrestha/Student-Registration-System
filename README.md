@@ -8,4 +8,6 @@ JavaScript: For interactive features and enhanced user experience.
 PHP: For server-side processing and logic.
 MySQL: For securely storing and managing student data in a structured database.
 This system provides a simple yet effective solution for schools to maintain an organized database, reduce paperwork, and enhance operational efficiency.
+
+
 You can live preview this project at : http://student-registration-system.infinityfreeapp.com/
